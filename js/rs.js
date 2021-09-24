@@ -1,63 +1,5 @@
     //////////////////////////////////////////////////////////////////////////
-    // Scene 2: Total Population Choropleth
-    // Set function for color ramp
-    function setColor1(density) {
-        //Tenary operation: condition ? valueIfTrue : valueIfFalse
-        // condition ? value1 : value2
-        return density > 564088 ? '#b30000' :
-            density > 210916 ? '#e34a33' :
-            density > 87455 ? '#fc8d59' :
-            density > 37660 ? '#fdcc8a' :
-            '#fef0d9';
-    }
-
-    function style1(feature) {
-        return {
-            fillColor: '#ffffff',
-            fillOpacity: 0.1,
-            weight: 2,
-            opacity: 0.8,
-            color: '#605f5f',
-            dashArray: '4'
-        };
-    }
-
-    var toate_rs = L.geoJson.ajax('assets/rm.geojson', {
-        style: style1,
-        onEachFeature: function (feature, layer) {
-            layer.bindTooltip(feature.properties.gid_0 + "<br> Denumirea: " + feature.properties
-                .name_0, {
-                    className: 'feature-label',
-                    permanent: false,
-                    direction: 'center'
-                });
-        }
-    });
-
-
-    var toate_rs_legend = '<p><b>Total Population</b></p>' +
-        '<i style="background: #fef0d9; opacity: 0.5"></i><p><b>0 - 37,660</b></p>' +
-        '<i style="background: #fdcc8a; opacity: 0.5"></i><p><b>37,661 - 87,455</b></p>' +
-        '<i style="background: #fc8d59; opacity: 0.5"></i><p><b>87,456 - 210,916</b></p>' +
-        '<i style="background: #e34a33; opacity: 0.5"></i><p><b>210,917 - 564,088</b></p>' +
-        '<i style="background: #b30000; opacity: 0.5"></i><p><b>>564,088</b></p>';
-
-
-
-    //////////////////////////////////////////////////////////////////////////
-    // Scene 3: Rural Population Percentage
-
-    // Set function for color ramp
-    function setColor2(density) {
-        //Tenary operation: condition ? valueIfTrue : valueIfFalse
-        // condition ? value1 : value2
-        return density > 100 ? '#b30000' :
-            density > 75 ? '#e34a33' :
-            density > 50 ? '#fc8d59' :
-            density > 25 ? '#fdcc8a' :
-            '#fef0d9';
-    }
-
+    // Scene 2: Toate rezervațiile științifice
 
     function style2(feature) {
         return {
@@ -65,13 +7,42 @@
             fillOpacity: 0.1,
             weight: 2,
             opacity: 0.8,
-            color: '#605f5f',
+            color: '#A44512',
             dashArray: '4'
         };
     }
 
-    var codrii = L.geoJson.ajax('assets/aps_codrii.geojson', {
+    var toate_rs = L.geoJson.ajax('assets/rm.geojson', {
         style: style2,
+        onEachFeature: function (feature, layer) {
+            layer.bindTooltip('Republica Moldova', {
+                    className: 'feature-label',
+                    permanent: false,
+                    direction: 'center'
+                });
+        }
+    });
+
+    var toate_rs_legend = '<p><b>Legenda</b></p><br>' +
+        '<i style="background: #A44512; opacity: 0.8"></i><p><b>Hotarele RM</b></p><br><br>';
+
+
+        //////////////////////////////////////////////////////////////////////////
+    // Scene 3: Codrii
+
+    function style3(feature) {
+        return {
+            fillColor: 'green',
+            fillOpacity: 0.1,
+            weight: 3,
+            opacity: 0.8,
+            color: '#78BE21',
+            dashArray: '6'
+        };
+    }
+
+    var codrii = L.geoJson.ajax('assets/aps_codrii.geojson', {
+        style: style3,
         onEachFeature: function (feature, layer) {
             layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
@@ -81,32 +52,16 @@
         }
     });
 
+    var codrii_legend = '<p><b>RS Codrii</b></p><br>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
+    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
 
-
-
-
-    var codrii_legend = '<p><b>Rural Population</b></p>' +
-        '<i style="background: #fef0d9; opacity: 0.5"></i><p><b>0% - 25%</b></p>' +
-        '<i style="background: #fdcc8a; opacity: 0.5"></i><p><b>25.1% - 50%</b></p>' +
-        '<i style="background: #fc8d59; opacity: 0.5"></i><p><b>50.1% - 75%</b></p>' +
-        '<i style="background: #e34a33; opacity: 0.5"></i><p><b>75.1% - 100%</b></p>';
 
     //////////////////////////////////////////////////////////////////////////
-    // Scene 4: Net Migration
+    // Scene 4: Plaiul Fagului
 
-    // Set function for color ramp
-    function setColor3(density) {
-        //Tenary operation: condition ? valueIfTrue : valueIfFalse
-        // condition ? value1 : value2
-        return density > 12.91705 ? '#b30000' :
-            density > 7.76944 ? '#e34a33' :
-            density > 3.193155 ? '#fc8d59' :
-            density > -2.927277 ? '#fdcc8a' :
-            '#fef0d9';
-    }
 
-    // Set style function that sets fill color property equal to net migration
-    function style3(feature) {
+    function style4(feature) {
         return {
             fillColor: '#ffffff',
             fillOpacity: 0.1,
@@ -129,71 +84,12 @@
     });
 
 
-    var domneasca_legend = '<p><b>Net Migration</b></p>' +
-        '<i style="background: #fef0d9; opacity: 0.5"></i><p><b>-7.18 - -2.93</b></p>' +
-        '<i style="background: #fdcc8a; opacity: 0.5"></i><p><b>-2.92 - 3.19</b></p>' +
-        '<i style="background: #fc8d59; opacity: 0.5"></i><p><b>3.20 - 7.77</b></p>' +
-        '<i style="background: #e34a33; opacity: 0.5"></i><p><b>7.78 - 12.92</b></p>' +
-        '<i style="background: #b30000; opacity: 0.5"></i><p><b>>12.93</b></p>';
+    var domneasca_legend = '<p><b>RS Pădurea Domnească</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
+    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
 
-
-    // Scene 5: Housing Cost Burden
-
-
-    // Set function for color ramp
-    function setColor4(density) {
-        //Tenary operation: condition ? valueIfTrue : valueIfFalse
-        // condition ? value1 : value2
-        return density > 38.111159 ? '#b30000' :
-            density > 34.546092 ? '#e34a33' :
-            density > 31.156108 ? '#fc8d59' :
-            density > 26.767134 ? '#fdcc8a' :
-            '#fef0d9';
-    }
-
-    function style4(feature) {
-        return {
-            fillColor: '#ffffff',
-            fillOpacity: 0.1,
-            weight: 2,
-            opacity: 0.8,
-            color: '#605f5f',
-            dashArray: '4'
-        };
-    }
-
-    var fagul = L.geoJson.ajax('assets/aps_plaiul_fagului.geojson', {
-        style: style4,
-        onEachFeature: function (feature, layer) {
-            layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
-                className: 'feature-label',
-                permanent: false,
-                direction: 'center'
-            });
-        }
-    });
-
-
-    var fagul_legend = '<p><b>Housing Cost Burden</b></p>' +
-        '<i style="background: #fef0d9; opacity: 0.5"></i><p><b>23.02 - 26.77</b></p>' +
-        '<i style="background: #fdcc8a; opacity: 0.5"></i><p><b>26.78 - 31.16</b></p>' +
-        '<i style="background: #fc8d59; opacity: 0.5"></i><p><b>31.17 - 34.55</b></p>' +
-        '<i style="background: #e34a33; opacity: 0.5"></i><p><b>34.56 - 38.11</b></p>' +
-        '<i style="background: #b30000; opacity: 0.5"></i><p><b>>38.12</b></p>';
-
-    // Scene 5: Housing Cost Burden
-
-
-    // Set function for color ramp
-    function setColor5(density) {
-        //Tenary operation: condition ? valueIfTrue : valueIfFalse
-        // condition ? value1 : value2
-        return density > 38.111159 ? '#b30000' :
-            density > 34.546092 ? '#e34a33' :
-            density > 31.156108 ? '#fc8d59' :
-            density > 26.767134 ? '#fdcc8a' :
-            '#fef0d9';
-    }
+    //////////////////////////////////////////////////////////////////////////
+    // Scene 5: Pădurea Domnească
 
     function style5(feature) {
         return {
@@ -206,8 +102,8 @@
         };
     }
 
-    var prutul = L.geoJson.ajax('assets/aps_prutul_jos.geojson', {
-        style: style5,
+    var fagul = L.geoJson.ajax('assets/aps_plaiul_fagului.geojson', {
+        style: style3,
         onEachFeature: function (feature, layer) {
             layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
@@ -218,26 +114,12 @@
     });
 
 
-    var prutul_legend = '<p><b>Housing Cost Burden</b></p>' +
-        '<i style="background: #fef0d9; opacity: 0.5"></i><p><b>23.02 - 26.77</b></p>' +
-        '<i style="background: #fdcc8a; opacity: 0.5"></i><p><b>26.78 - 31.16</b></p>' +
-        '<i style="background: #fc8d59; opacity: 0.5"></i><p><b>31.17 - 34.55</b></p>' +
-        '<i style="background: #e34a33; opacity: 0.5"></i><p><b>34.56 - 38.11</b></p>' +
-        '<i style="background: #b30000; opacity: 0.5"></i><p><b>>38.12</b></p>';
+    var fagul_legend = '<p><b>RS Plaiul Fagului</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
+    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
 
-    // Scene 5: Housing Cost Burden
-
-
-    // Set function for color ramp
-    function setColor6(density) {
-        //Tenary operation: condition ? valueIfTrue : valueIfFalse
-        // condition ? value1 : value2
-        return density > 38.111159 ? '#b30000' :
-            density > 34.546092 ? '#e34a33' :
-            density > 31.156108 ? '#fc8d59' :
-            density > 26.767134 ? '#fdcc8a' :
-            '#fef0d9';
-    }
+    //////////////////////////////////////////////////////////////////////////
+    // Scene 6: Prutul de Jos
 
     function style6(feature) {
         return {
@@ -250,8 +132,8 @@
         };
     }
 
-    var iagorlic = L.geoJson.ajax('assets/aps_iagorlic.geojson', {
-        style: style6,
+    var prutul = L.geoJson.ajax('assets/aps_prutul_jos.geojson', {
+        style: style3,
         onEachFeature: function (feature, layer) {
             layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
@@ -262,12 +144,31 @@
     });
 
 
-    var iagorlic_legend = '<p><b>Housing Cost Burden</b></p>' +
-        '<i style="background: #fef0d9; opacity: 0.5"></i><p><b>23.02 - 26.77</b></p>' +
-        '<i style="background: #fdcc8a; opacity: 0.5"></i><p><b>26.78 - 31.16</b></p>' +
-        '<i style="background: #fc8d59; opacity: 0.5"></i><p><b>31.17 - 34.55</b></p>' +
-        '<i style="background: #e34a33; opacity: 0.5"></i><p><b>34.56 - 38.11</b></p>' +
-        '<i style="background: #b30000; opacity: 0.5"></i><p><b>>38.12</b></p>';
+    var prutul_legend = '<p><b>RS Prutul de Jos</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
+    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
+
+    //////////////////////////////////////////////////////////////////////////
+    // Scene 7: Iagorlic
+
+
+
+
+    var iagorlic = L.geoJson.ajax('assets/aps_iagorlic.geojson', {
+        style: style3,
+        onEachFeature: function (feature, layer) {
+            layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
+                className: 'feature-label',
+                permanent: false,
+                direction: 'center'
+            });
+        }
+    });
+
+
+    var iagorlic_legend = '<p><b>RS Iagorlîc</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
+    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
 
     //////////////////////////////////////////////////////////////////////////
 
@@ -330,7 +231,7 @@
             lng: 27.00,
             zoom: 7.5,
             name: 'Toate RȘ',
-            layers: [layers.toate_rs]
+            layers: [layers.toate_rs,layers.codrii, layers.domneasca, layers.fagul, layers.prutul, layers.iagorlic]
         },
         codrii: {
             lat: 47.0666667,
@@ -389,9 +290,9 @@
             // create a map in the "map" div, set the view to a given place and zoom
             var map = L.map($(".storymap-map")[0], {
                 zoomControl: false,
-                scrollWheelZoom: false,
                 fadeAnimation: true,
-                zoomAnimation: true
+                zoomAnimation: true,
+                dragging: true, scrollWheelZoom: true, maxZoom: 14
             }).setView([47, 27], 7.5);
 
             //add an miniglobe
