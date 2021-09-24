@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Arii Protejate de Stat din Moldova: Rezervații Științifice</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="Arii Protejate de Stat din Moldova: Rezervații Științifice" />
+    <meta property="og:url" content="http://benjiantolin.github.io/obtcstorymap/index.html" />
+    <meta property="og:description"
+        content="Această pagină conține date generale despre Ariile Protejate de Stat Științifice din Republica Moldova" />
+
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--leaflet css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cairo|Lato" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css">
+    <!--add required libraries-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!--boostrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--leaflet.ajax for asynchronously adding geojson data-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--mini globle map-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="js/globeminimap.js"></script>
+
+    <!--story map plugin-->
+    <script src="js/storymap.2.5.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="storymap" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 storymap-story">
+                <section data-scene="start" data-background="assets/fluture.mp4">
+                    <div class="fullscreen text-center">
+                        <h1 class="display-4 d-flex justify-content-center">Arii Protejate de Stat din Moldova:
+                            Rezervații Științifice</h1>
+                        <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+                            Acest site conține date generale despre Rezervațiile Științifice din Republica Moldova.
+                        </small>
+                    </div>
+                </section>
+
+                <section data-scene="toate_rs">
+                    <h2>Ariile Protejate de Stat</h2>
+                    <h5><i><b>Definiție:</b> Spaţiu natural, delimitat geografic, cu elemente naturale reprezentative şi
+                            rare, desemnat şi reglementat în scopul conservării şi protecţiei tuturor factorilor de
+                            mediu din limitele lui.</i></h5>
+                    <br>
+                    <p>În Republica Moldova sunt 313 arii protejate, 158 amplasamente de arbori seculari (în total 429
+                        arbori) și 472 specii rare de floră și faună (în adaos: 9 familii și 3 ordine). Suprafața totală
+                        a ariilor protejate se ridică la peste 150.000 ha. Cadrul legal de protecție îl reprezintă Legea
+                        nr. 1538 din 25.02.1998 privind fondul ariilor naturale protejate de stat. </p>
+                </section>
+
+                <section data-scene="codrii">
+                    <h2>Codrii</h2>
+                    <img src="img/rs_codrii.jpg" alt-text="Codrii" class="img-responsive img-thumbnail"
+                        alt="responsive image">
+                    <p> Rezervația a fost creată în 1971 pe o suprafață de 5177 ha. Aici sunt puse sub protecție circa
+                        1000 specii de plante, 43 specii de mamifere, 145 specii de păsări, 7 specii de reptile, 10
+                        specii de amfibieni și peste 10 mii specii de insecte. Principalele specii de arbori în pădure
+                        sunt stejarul pedunculat, gorunul și fagul. În cadrul rezervației funcționează un bogat „Muzeu
+                        al naturii”.</p>
+                    <p>Flora se compune din specii de plante, care provin din 3 regiuni fitogeografice: mediteraneană
+                        (forestieră), central-europeană (forestieră) și euroasiatică (stepică). În rezervație sunt
+                        înregistrate 60 de specii de plante rare, dintre care 23 sunt incluse în Cartea Roșie a
+                        Moldovei.Vegetația zonală este reprezentată prin păduri de foioase de tipul celor din Europa
+                        Centrală cu formațiunile: Fagus sylvatica, Querceta petraeae și Querceta roburis. Vegetația
+                        interzonală s-a format in văgăuni, fiind reprezentată prin fâșii înguste și pâlcuri de
+                        plopișuri, sălcișuri, răchitișuri și pajiști mezofile. Aici și-au gasit extremitatea estică a
+                        arealului unele specii central europene (fag, ferigi, orhidee, etc.) și extremitatea sudică
+                        (Eriophorum latifolium, Padus avium, etc). </p>
+                    <p>Reprezintă aproape în totalitate pădurile Europei Centrale și de Vest. S-au format condiții
+                        favorabile de creștere și de reproducere pentru reprezentanții faunei din munții Carpați,
+                        Balcani, din Asia , care întrunesc 52 de specii de mamifere, 151 de specii de păsări, 8 specii
+                        de reptile, 10 specii de amfibieni, 8000 de specii de insecte. Se întîlnesc specii rare, precum:
+                        jder de pădure, chițcan cu abdomen alb, usturoaie, etc.</p>
+                    <br>
+                    <p align="right">
+                    <a href="https://ro.wikipedia.org/wiki/P%C4%83durea_Domneasc%C4%83">Wikipedia</a>
+                    </p>
+                </section>
+
+                <section data-scene="domneasca">
+                    <h2>Pădurea Domnească</h2>
+                    <img src="img/rs_padurea_domneasca.jpg" alt-text="Padurea Domnească"
+                        class="img-responsive img-thumbnail" alt="responsive image">
+                    <p>Rezervația „Pădurea Domnească” este amplasată în lunca râului Prut și este unică prin
+                        biodeversitatea ei, tipurile de soluri și vegetație, relief. Scopul ei principal este păstrarea
+                        celor mai reprezentative păduri de luncă și conservarea unor specii și comunități de plante și
+                        animale rare, restabilirea biodeversității celor mai caracteristice fitocenoze. Este cea mai
+                        bătrână pădure din ținut și una din cele mai vechi păduri de lunca din Europa.</p>
+                    <p>Vegetația silvica în luncă s-a format de regulă pe teritorii relativ rar supuse inundațiilor de
+                        scurtă durată. Sunt evidențiate două niveluri ocupate de pădure: nivelul luncii inundabile și
+                        nivelul primei terase de luncă. În anumite perioade nivelul apelor crește și afectează
+                        orizonturile inferioare ale solului. Regimurile hidrice ale solurilor din lunca Prutului în
+                        ultimele decenii sunt influențate de barajul Costești-Stânca. În asociațiile cu esențe de plop,
+                        situate pe niveluri mai joase, sunt răspândite soluri aluviale carbonatice. În apropierea albiei
+                        râului cresc de salcie, în care predomină solurile aluviale stratificate gleizate, influențate
+                        de apele freatice ale căror nivel este determinat de râu. Vegetația din rezervație s-a format
+                        sub influența regimului apelor Prutului, a sistemelor de gârle prin care apele Prutului și
+                        râușorului Camenca pătrundeau și alimentau cu apele pădurile,pajiștile, mai ales în timpul
+                        inundațiilor. În funcție de acești factori, s-au format trei tipuri de vegetație: forestieră,
+                        pajiști de luncă și vegetație acvatică.</p>
+                    <p>Fauna rezervației „Pădurea Domnească” este bogată și variată. Starea și structura arboretului de
+                        luncă cu numeroase poieni acoperite diferite specii de plante ierboase creează condiții
+                        favorabile pentru dezvoltarea multor specii de plante, animale și păsări. Flora bogată și
+                        variată creează condiții pentru dezvoltarea și înmulțirea mamiferelor, în special a copitatelor.
+                        Cei mai tipici reprezentanți ai copitatelor sunt Cerbul nobil (Cervus elaphus),cel mai mare
+                        mamifer sălbatic în fauna Moldovei; căpriorul (Capreolus capreolus), care se întâlnește în toate
+                        parcelele rezervației; mistrețul (Sus scrofa), cel mai numeros paracopitat de pe teritoriul
+                        rezervației. În limitele teritoriului dat se întâlnesc și specii rare de animale, introduse în
+                        Cartea Roșie: pisica sălbatică (Felis silvestris), jderul de pădure (Martes martes), chițcan cu
+                        abdomen alb (Crocedura leucodon), vidra (Lutra lutra), nurca europeană (Lutreola lutreola).</p>
+                    <p>În anul 2005, în baza unui acord interstatal dintre conducerea Republicii Moldova și cea a
+                        Republicii Polone, s-a convenit de a reaclimatiza zimbrul în Republica Moldova. Drept urmare, în
+                        data de 19 august 2005 în rezervația naturală „Pădurea Domnească” au fost aduși 3 zimbri (un
+                        mascul și două femele) din 2 rezervații diferite din Polonia.[1] Spre sfârșitul anului 2013,
+                        populația de zimbri din rezervația Pădurea Domnească a ajuns în număr de șase. În rezervație
+                        zimbrii sunt ținuți într-un țarc cu o suprafață de 32 de hectare, care poate găzdui până la 18
+                        exemplare.[2]</p>
+                    <br>
+                    <p align="right">
+                    <a href="https://ro.wikipedia.org/wiki/P%C4%83durea_Domneasc%C4%83">Wikipedia</a>
+                    </p>
+                </section>
+
+                <section data-scene="fagul">
+                    <h2>Plaiul Fagului</h2>
+                    <img src="img/rs_plaiul_fagului.jpg" alt-text="Plaiul Fagului" class="img-responsive img-thumbnail"
+                        alt="responsive image">
+                    <p>Rezervația a fost fondată în 1992 și are o suprafață de 5642 ha, reprezentând o zonă cu rol de
+                        protecție pentru un ecosistem reprezentativ din punct de vedere silvic.</p>
+                    <p>Cele mai răspândite specii de plante arboricole sunt: gorunul – ocupă circa 31 % din suprafața
+                        împădurită, frasinul - cca 21 %, carpenul – cca 19 %. Deși are o pondere de numai 5%, fagul este
+                        cel mai răspândit anume în această rezervația, comparativ cu restul teritoriu al țării.</p>
+                    <p>Pe teritoriul rezervației se întâlnesc cca 900 specii de plante, dintre care plantele vasculare
+                        alcătuiesc cca 640 specii, lichenii – cca 50 specii și alte specii. Din numărul total de specii
+                        floristice 77 au devenit rare, alcătuind aproximativ 33 % din speciile rare de flora spontană a
+                        Republicii Moldova. Preponderent în aceasta rezervație cresc astfel de specii că mălinul, pana
+                        zburătorului, perișorul, ferigile și altele. Făgetele, care sunt cel mai mult răspândite aici,
+                        comparativ cu restul teritoriului republicii, alcătuiesc cca 260 ha sau 5 % din teritoriul
+                        rezervației. Sectoarele cu stejar ocupă cca 230 ha sau aproximativ 4 % din teritoriu.</p>
+                    <p>Aria naturală este interesantă și atractivă din punct de vedere al complexului faunistic,
+                        adăpostind și asigurând condiții de viețuire și hrană pentru mai multe specii de mamifere,
+                        păsări și insecte (complexul entomofaunei este bine reprezentat în lunca văii Bîcului), dintre
+                        care: cerb (Cervus elaphus), cerb pătat, cerb lopătar (Dama dama), mistreț (Sus scrofa), jder de
+                        pădure (Martes), pisică sălbatică (Felis silvestris), bursuc (Meles meles), hermelină (Mustela
+                        frenata), veveriță (Sciurus carolinensis), specii de lilieci, buhă mare (Bubo bubo) sau cucuvea
+                        (Athene noctua).</p>
+                    <br>
+                    <p align="right">
+                        <a href="https://ro.wikipedia.org/wiki/Plaiul_Fagului">Wikipedia</a>
+                        </p>
+                </section>
+                <section data-scene="prutul">
+                    <h2>Prutul de Jos</h2>
+                    <img src="img/rs_prutul_jos.jpg" alt-text="Prutul de Jos" class="img-responsive img-thumbnail"
+                        alt="responsive image">
+                    <p>Rezervația științifică Prutul de Jos este o arie protejată amplasată în cursul de jos al râului
+                        Prut, incluzând Lacul Beleu și împrejurimile sale, în sud-vestul Republicii Moldova.</p>
+                    <p>În componența ei intră lacul Beleu și o rețea de bălți care, în ansamblu, formează un ecosistem
+                        unic. Rezervația a fost creată la 23 aprilie 1991 în scopul ocrotirii florei și faunei din lacul
+                        Beleu și a luncilor inundabile din împrejurimile lui. Suprafața rezervației este de 1691 ha,
+                        circa ⅓ din suprafața rezervației este ocupată de apele lacului Beleu, restul teritoriului este
+                        prezentat prin vegetația palustră și de luncă inundabilă.</p>
+                    <p>Vegetația, în cea mai mare parte a teritoriului rezervației, este reprezentată de desișurile de
+                        trestii și stuf, sălcișuri, precum și de un covor bogat de plante de apă, de luncă inundabilă
+                        (papura, pipiriga, nufărul, crinul de apă, răculețul, lintița). În total, aici cresc 193 specii
+                        de plante, dintre care sunt incluse în Cartea Roșie a Moldovei: nufărul alb (Nymphaea alba),
+                        categoria UICN de raritate – II (specie periclitată), salvinia (Salvinia natans), cornaciul
+                        plutitor (Trapa natans). Pădurile de stejar comun prefera sectoarele de luncă cele mai ridicate
+                        care foarte rar sint inundate.</p>
+                    <p>Pe teritoriul rezervației se întâlnesc și specii rare de mamifere: vidra (lutra lutra), hermelina
+                        (Mustera erminea), nurca europeană (Mustela lutreola) ș.a</p>
+                    <p>Ihtiofauna complexului acvatic este reprezentată de peste 30 de specii de pești: crapul, carasul,
+                        plătica, văduvița, avatul, babușca, somonul, șalăul, cosașul ș.a. Specii rare: plătica de
+                        Dunăre, bibanul-soare, cega, soretele, mihalțul ș.a.</p>
+                    <p>Conform Legii ariilor protejate din 1998,este o rezervație științifică. A primit acest statut
+                        în 1991. La 13 noiembrie 2018, rezervația a fost înscrisă în Rețeaua Mondială UNESCO a
+                        Rezervațiilor Biosferei, devenind prima rezervație a biosferei instituită în Republica
+                        Moldova.</p>
+                    <br>
+                    <p align="right">
+                        <a href="https://ro.wikipedia.org/wiki/Prutul_de_Jos">Wikipedia</a>
+                        </p>
+                </section>
+                <section data-scene="iagorlic">
+                    <h2>Iagorlîc</h2>
+                    <img src="img/rs_iagorlic.jpg" alt-text="Iagorlic" class="img-responsive img-thumbnail"
+                        alt="responsive image">
+                    <p>Rezervația a fost înființată în anul 1988. În prezent, suprafața rezervației este de 8,77 km2.
+                    </p>
+                    <p>Rezervația include sisteme ecologice acvatice și terestre, în care au fost create condiții pentru
+                        reproducerea animalelor și plantelor. Este situată la gura râului Iagorlîc, pe malul stâng al
+                        Nistrului. Rezervația a fost organizată în scopul păstrării și studierii condițiilor ecologice
+                        caracteristice bazinelor de apă din apropierea Nistrului. Cea mai mare valoare a rezervației
+                        naturale "Iagorlîc" constă în faptul că aici sunt foarte multe specii rare și pe cale de
+                        dispariție de plante, care intră în fitocenozele unicale, situate pe pantele calcarizate de
+                        stepă ale râurilor Iagorlîc, Iagorlîcul uscat și a unor pârâuri mari.</p>
+                    <p>Bazinele de apă ale rezervației naturale de asemenea sunt preferate de diverși reprezentanți ai
+                        faunei. Cea mai mare însemnătate ele o au pentru diverse specii de pești, care le folosesc
+                        pentru depunerea icrelor. Ihtiofauna enumeră 23 de specii de pești. Se intâlnesc 29 de specii de
+                        mamifere, 121 de specii de păsări din 14 ordine. Specii rare sunt: popândăul european
+                        (Spermophilus citelus), hermelina, șarpele de alun, șarpele cu abdomen galben, broasca țestoasă
+                        de apă. Din speciile incluse în Cartea Roșie a Moldovei se întâlnesc lebăda neagră, iar vulturul
+                        pescar (Pandion haliaetus) și eretele vânat (Circus cyaneus) se întâlnesc în timpul migrației.
+                        Ornitofauna rezervației constituie 167 de specii de păsări, dintre care 91 dintre ele își fac
+                        cuiburi. 15 specii de păsări, înregistrate în rezervația naturală, sunt incluse în Cartea Roșie
+                        a Moldovei (2001), 12 specii în Cartea Roșie a Ucrainei (1994).</p>
+                    <br>
+                                        <p align="right">
+                    <a
+                        href="https://ro.wikipedia.org/wiki/Iagorl%C3%AEc_(rezerva%C8%9Bie_%C8%99tiin%C8%9Bific%C4%83)">Wikipedia</a>
+</p>
+
+                </section>
+                <section data-scene="sfarsit" data-background="img/sfarsit.jpg">
+                    <div class="fullscreen text-center">
+                        <h1 class="display-4 d-flex justify-content-center">Pentru mai multe informații despre Ariile
+                            Protejate din RM vedeți:</h1>
+                        <h4 class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+                            <a href="https://ro.wikipedia.org/wiki/Arii_protejate_din_Republica_Moldova">Arii protejate
+                                din Republica Moldova</a>
+                        </h4>
+                        <h4 class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+                            <a href="http://lex.justice.md/viewdoc.php?action=view&view=doc&id=311614&lang=1">LEGE Nr.
+                                1538 din 25.02.1998 privind fondul ariilor naturale protejate de stat</a>
+                        </h4>
+                        <h4 class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+                            <a href="https://ieg.asm.md/ro/cadastrul_ariilor_protejate">Cadastrul ariilor naturale
+                                protejate de stat</a>
+                        </h4>
+                        <h4 class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+                            <a href="http://spdm.oikumena.md/">Serviciul Public al Datelor de Mediu. Arii Protejate</a>
+                        </h4>
+                    </div>
+                </section>
+
+            </div>
+            <!--map div-->
+            <div class="col-sm-6 col-md-8 storymap-map"></div>
+        </div>
+
+        <dl>
+            <dt>
+                <!--facebook icon-->
+                <a class="fab fa-facebook-square btn"
+                    href="https://xxxxxxxxfacebook.yyy/sharer.php?u=http://benjiantolin.github.io/obtcstorymap/index.html"
+                    target="_blank"></a>
+            </dt>
+            <dt>
+                <!--facebook icon-->
+                <a class="fab fa-github btn" href="xxxxxhttps://xxxxxgithub.com/benjiantolin/obtcstorymap"
+                    style="top:40px" target="_blank"></a>
+            </dt>
+            <dt>
+                <!--info icon-->
+                <i class="fas fa-info-circle btn" style="top:60px" data-toggle="modal" data-target="#info-modal"></i>
+            </dt>
+        </dl>
+
+        <!--the info page-->
+        <div class="modal fade" id="info-modal" role="dialog">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Despre site</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Autor: Veaceslav Zagaevschi | Terra Concept</b> </p>
+                        <p>Pagina conține date publice despre Ariile Protejate de Stat din Republica Moldova colectate
+                            din surse internet.</p>
+                        <br>
+                        Scopul elaborării sitului: Testarea posibilităților storymap.
+                        <br>
+                        <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.5 | MIT License </p>
+                        <br>
+                        <p><b>Datele geospațiale:</b> Cartodb, Terra Concept și Oikumena.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+</body>
+
+
+    <script src="js/rs.js"></script>
+
+</html>
