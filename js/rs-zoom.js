@@ -250,35 +250,35 @@
             lng: 28.30,
             zoom: 12,
             name: 'RȘ Codrii',
-            layers: [layers.satellite, layers.codrii]
+            layers: [layers.codrii]
         },
         domneasca: {
             lat: 47.61,
             lng: 27.22,
             zoom: 11,
             name: 'RȘ Pădurea Domnească',
-            layers: [layers.satellite, layers.domneasca]
+            layers: [layers.domneasca]
         },
         fagul: {
             lat: 47.28,
             lng: 27.95,
             zoom: 12,
             name: 'RȘ Plaiul Fagului',
-            layers: [layers.satellite, layers.fagul]
+            layers: [layers.fagul]
         },
         prutul: {
             lat: 45.59,
             lng: 28.08,
             zoom: 13,
             name: 'RȘ Prutul de Jos',
-            layers: [layers.satellite, layers.prutul]
+            layers: [layers.prutul]
         },
         iagorlic: {
             lat: 47.38,
             lng: 29.12,
             zoom: 13,
             name: 'RȘ Iagorlîc',
-            layers: [layers.satellite, layers.iagorlic]
+            layers: [layers.iagorlic]
         },
         sfarsit: {
             lat: 47.00,
@@ -298,7 +298,7 @@
         flyto: true,
         navwidget: false,
         navbar: false,
-        mapinteraction: false,
+        mapinteraction: true,
 
         createMap: function () {
             var map = L.map($(".storymap-map")[0], {
