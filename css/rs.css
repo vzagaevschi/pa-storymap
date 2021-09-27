@@ -1,0 +1,47 @@
+
+nav .navbar-brand {
+    padding-top: 2px !important;
+    padding-bottom: 0 !important;
+    font-size: 1rem;
+}
+
+div .navbar-brand {
+    padding-top: 2px !important;
+    padding-bottom: 0 !important;
+    font-size: 1rem;
+}
+
+.social {
+
+    padding-left: 0px;
+    padding-right: 0px !important;
+    cursor: pointer;
+}
+
+.social2 {
+    position:fixed;
+    padding-left: 1px;
+    padding-right:18px !important;
+    cursor: pointer;
+}
+
+.social:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+.storymap-legend {
+    width: 130px;
+    top: 40px;
+}
+
+.circle {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    border:0.2px solid #ffffff;
+}
+
+.index-icon {
+    margin-top: 100px;
+}

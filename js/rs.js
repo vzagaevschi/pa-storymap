@@ -4,9 +4,9 @@
     function style2(feature) {
         return {
             fillColor: '#ffffff',
-            fillOpacity: 0.1,
+            fillOpacity: 0.2,
             weight: 2,
-            opacity: 0.8,
+            opacity: 1.0,
             color: '#A44512',
             dashArray: '4'
         };
@@ -16,18 +16,18 @@
         style: style2,
         onEachFeature: function (feature, layer) {
             layer.bindTooltip('Republica Moldova', {
-                    className: 'feature-label',
-                    permanent: false,
-                    direction: 'center'
-                });
+                className: 'feature-label',
+                permanent: false,
+                direction: 'center'
+            });
         }
     });
 
     var toate_rs_legend = '<p><b>Rezervații Științifice</b></p><br>' +
-        '<i style="background: #A44512; opacity: 0.8"></i><p>Hotarul RM</p><br>';
+        '<i style="background: #A44512; opacity: 1.0"></i><p>Hotarul RM</p><br>';
 
 
-        //////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
     // Scene 3: Codrii
 
     function style3(feature) {
@@ -35,19 +35,19 @@
             fillColor: '#4daf4a',
             fillOpacity: 0.1,
             weight: 3,
-            opacity: 0.8,
+            opacity: 1.0,
             color: '#78BE21',
             dashArray: '6'
         };
     }
 
-    
+
 
 
     var codrii = L.geoJson.ajax('assets/aps_codrii.geojson', {
         style: style3,
         onEachFeature: function (feature, layer) {
-            layer.bindTooltip(href="Rezervația Științifică: <br>" + feature.properties.name, {
+            layer.bindTooltip(href = "Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
                 permanent: false,
                 direction: 'center'
@@ -56,8 +56,7 @@
     });
 
     var codrii_legend = '<p><b>Codrii</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
-    '<i style="background: #4daf4a; opacity: 0.1"></i><p>Suprafața</p><br>';
+        '<i style="background: #78BE21; opacity: 1.0"></i><p>Hotarul RS</p><br>';
 
 
     //////////////////////////////////////////////////////////////////////////
@@ -66,11 +65,11 @@
 
     function style4(feature) {
         return {
-            fillColor: '#e41a1c',
+            fillColor: '#4daf4a',
             fillOpacity: 0.1,
-            weight: 2,
-            opacity: 0.8,
-            color: '#78BE21',
+            weight: 3,
+            opacity: 1.0,
+            color: '#ff7f00',
             dashArray: '4'
         };
     }
@@ -88,19 +87,18 @@
 
 
     var domneasca_legend = '<p><b>Pădurea Domnească</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
-    '<i style="background: #e41a1c; opacity: 0.1"></i><p>Suprafața</p><br>';
+        '<i style="background: #ff7f00; opacity: 1.0"></i><p>Hotarul RS</p><br>';
 
     //////////////////////////////////////////////////////////////////////////
     // Scene 5: Pădurea Domnească
 
     function style5(feature) {
         return {
-            fillColor: '#377eb8',
+            fillColor: '#4daf4a',
             fillOpacity: 0.1,
-            weight: 2,
-            opacity: 0.8,
-            color: '#78BE21',
+            weight: 3,
+            opacity: 1.0,
+            color: '#984ea3',
             dashArray: '4'
         };
     }
@@ -118,19 +116,18 @@
 
 
     var fagul_legend = '<p><b>Plaiul Fagului</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
-    '<i style="background: #377eb8; opacity: 0.1"></i><p>Suprafața</p><br>';
+        '<i style="background: #984ea3; opacity: 1.0"></i><p>Hotarul RS</p><br>';
 
     //////////////////////////////////////////////////////////////////////////
     // Scene 6: Prutul de Jos
 
     function style6(feature) {
         return {
-            fillColor: '#984ea3',
+            fillColor: '#4daf4a',
             fillOpacity: 0.1,
-            weight: 2,
-            opacity: 0.8,
-            color: '#78BE21',
+            weight: 3,
+            opacity: 1.0,
+            color: '#377eb8',
             dashArray: '4'
         };
     }
@@ -148,19 +145,18 @@
 
 
     var prutul_legend = '<p><b>Prutul de Jos</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
-    '<i style="background: #984ea3; opacity: 0.1"></i><p>Suprafața</p><br>';
+        '<i style="background: #377eb8; opacity: 1.0"></i><p>Hotarul RS</p><br>';
 
     //////////////////////////////////////////////////////////////////////////
     // Scene 7: Iagorlic
 
     function style7(feature) {
         return {
-            fillColor: '#ffff33',
+            fillColor: '#4daf4a',
             fillOpacity: 0.1,
-            weight: 2,
-            opacity: 0.8,
-            color: '#78BE21',
+            weight: 3,
+            opacity: 1.0,
+            color: '#e41a1c',
             dashArray: '4'
         };
     }
@@ -179,8 +175,7 @@
 
 
     var iagorlic_legend = '<p><b>Iagorlîc</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
-    '<i style="background: #ffff33; opacity: 0.1"></i><p>Suprafața</p><br>';
+        '<i style="background: #e41a1c; opacity: 1.0"></i><p>Hotarul RS</p><br>';
 
     //////////////////////////////////////////////////////////////////////////
 
@@ -227,7 +222,12 @@
         },
         cartodb_light: {
             layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}@2x.png')
+        },
+
+        OpenStreetMap_Mapnik: {
+            layer: L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
         }
+
     };
 
     var scenes = {
@@ -241,44 +241,44 @@
         toate_rs: {
             lat: 47.00,
             lng: 27.00,
-            zoom: 8 ,
+            zoom: 8,
             name: 'Toate RȘ',
-            layers: [layers.toate_rs,layers.codrii, layers.domneasca, layers.fagul, layers.prutul, layers.iagorlic]
+            layers: [layers.toate_rs, layers.codrii, layers.domneasca, layers.fagul, layers.prutul, layers.iagorlic]
         },
         codrii: {
             lat: 47.0666667,
             lng: 28.3,
             zoom: 12,
             name: 'RȘ Codrii',
-            layers: [layers.codrii]
+            layers: [layers.satellite, layers.codrii]
         },
         domneasca: {
             lat: 47.6097222,
             lng: 27.22,
             zoom: 11,
             name: 'RȘ Pădurea Domnească',
-            layers: [layers.domneasca]
+            layers: [layers.satellite, layers.domneasca]
         },
         fagul: {
             lat: 47.2800000,
             lng: 27.9500000,
             zoom: 12,
             name: 'RȘ Plaiul Fagului',
-            layers: [layers.fagul]
+            layers: [layers.satellite, layers.fagul]
         },
         prutul: {
             lat: 45.59,
             lng: 28.08,
             zoom: 13,
             name: 'RȘ Prutul de Jos',
-            layers: [layers.prutul]
+            layers: [layers.satellite, layers.prutul]
         },
         iagorlic: {
             lat: 47.370000,
             lng: 29.110000,
             zoom: 13,
             name: 'RȘ Iagorlîc',
-            layers: [layers.iagorlic]
+            layers: [layers.satellite, layers.iagorlic]
         },
         sfarsit: {
             lat: 47.0000000,
@@ -291,7 +291,7 @@
     $('#storymap').storymap({
         scenes: scenes,
         baselayer: layers.cartodb_light,
-        legend: true, 
+        legend: true,
         credits: "",
         loader: true,
         scalebar: true,
@@ -301,14 +301,13 @@
         mapinteraction: false,
 
         createMap: function () {
-            // create a map in the "map" div, set the view to a given place and zoom
             var map = L.map($(".storymap-map")[0], {
                 zoomControl: false,
                 fadeAnimation: true,
                 zoomAnimation: true,
-                dragging: true, 
-                scrollWheelZoom: false, 
-                minZoom: 7,                
+                dragging: true,
+                scrollWheelZoom: false,
+                minZoom: 7,
                 maxZoom: 13
             }).setView([47, 27], 7.5);
 
