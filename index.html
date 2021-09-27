@@ -30,6 +30,7 @@
 
 
     <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css">
+    <link rel="stylesheet" type="text/css" href="css/aps.css">
     <!--add required libraries-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
@@ -54,37 +55,24 @@
 
 <body>
 
-    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark storymap-navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/favicon.png" class="align-top" height="30px" align="left"> &nbsp;
-            </a>
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    Arii Protejate de Stat din Republica Moldova: Rezervații Științifice
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" >
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="fa fa-facebook-square social"
-                            href="https://xxfacebook.com/sharer.php?u=https://winkyt.github.io/standwithstandingrock"
-                            target="_blank"></a>
-                    </li>
-                    <li>
-                        <a class="fa fa-twitter-square social"
-                            href="https://xxtwitter.com/home?status=Location%20Spoofing%20at%20StandingRock%0Ahttps://winkyt.github.io/standwithstandingrock"
-                            target="_blank"></a>
-                    </li>
-                    <li>
-                        <i class="fas fa-info-circle social" data-toggle="modal" data-target="#info-modal"></i>
-                    </li>
-                </ul>
-            </div>
+
+
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" style="height: 34px" >
+        <a class="navbar-brand" href="#">
+            <img src="img/favicon.png" class="align-top" height="22px" align="left"> &nbsp;
+        </a>
+        <a class="navbar-brand" href="#">
+            Arii Protejate de Stat din Republica Moldova: Rezervații Științifice
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav  ml-auto">
+                <li>
+                    <i class="fas fa-info-circle social" style="color: white;" data-toggle="modal"
+                        data-target="#info-modal"></i>
+                </li>
+            </ul>
         </div>
     </div>
-
-
 
 
     <div id="storymap" class="container-fluid">
@@ -92,27 +80,44 @@
             <div class="col-sm-6 col-md-4 storymap-story">
                 <section data-scene="start" data-background="assets/fluture.mp4">
                     <div class="fullscreen text-center">
-                        <h1 class="display-4 d-flex justify-content-center">Arii Protejate de Stat din Republica
-                            Moldova:
+                        <h1 class="display-4 d-flex justify-content-center">
                             Rezervații Științifice</h1>
-                        <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
-                            Acest site conține date generale despre Rezervațiile Științifice din Republica Moldova.
-                        </small>
+                        <h3 class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+                            <i>Arii Protejate de Stat din Republica Moldova</i>
+                        </h3>
                     </div>
+
                 </section>
 
                 <section data-scene="toate_rs">
                     <h2>Ariile Protejate de Stat</h2>
-                    <h5><i><b>Definiție:</b> Aria protejată reprezintă un spaţiu natural, delimitat geografic, cu
+                    <p><i><b>Definiție:</b> Aria protejată reprezintă un spaţiu natural, delimitat geografic, cu
                             elemente naturale reprezentative şi
                             rare, desemnat şi reglementat în scopul conservării şi protecţiei tuturor factorilor de
-                            mediu din limitele lui.</i></h5>
+                            mediu din limitele lui.</i></p>
                     <br>
                     <p>În Republica Moldova sunt 313 arii protejate, 158 amplasamente de arbori seculari (în total 429
                         arbori) și 472 specii rare de plante și animale. Suprafața totală
                         a ariilor protejate se ridică la peste 150000 ha.</p>
                     <p>Cadrul legal de protecție îl reprezintă Legea
                         nr. 1538 din 25.02.1998 privind fondul ariilor naturale protejate de stat. </p>
+                    <h4>Rezervațiile Științifice</h4>
+                    <p><i><b>Definiție:</b> Rezervaţiile ştiinţifice sînt arii naturale protejate, obiectul cărora este
+                            protecţia şi
+                            conservarea unor habitate naturale terestre şi/sau acvatice, cuprinzînd elemente
+                            reprezentative
+                            de interes ştiinţific sub aspect floristic, faunistic, geologic, speologic, paleontologic,
+                            pedologic şi de altă natură.</i></p>
+                    <p>Managementul rezervaţiilor ştiinţifice asigură un regim strict de protecţie prin care habitatele
+                        sînt păstrate într-o stare, pe cît este posibil, neperturbată. Teritoriul rezervaţiilor
+                        ştiinţifice este repartizat în zone. În zona cu protecţie integrală nu se permit nici un fel de
+                        activităţi, derularea proceselor naturale rămînînd intactă.
+                        În celelalte zone ale rezervaţiilor ştiinţifice se desfăşoară activităţi ştiinţifice şi alte
+                        activităţi menite să sporească gradul de conservare a teritoriului. Se elaborează recomandări
+                        speciale pentru tăierile de reconstrucţie în celelalte zone.</p>
+                    <p>În Republica Moldova sunt 5 rezervații științifice: Codrii, Pădurea Domnească, Plaiul Fagului,
+                        Prutul de Jos și Iagorlîc.</p>
+
                 </section>
 
                 <section data-scene="codrii">
@@ -216,6 +221,7 @@
                         <a href="https://ro.wikipedia.org/wiki/Plaiul_Fagului">Wikipedia</a>
                     </p>
                 </section>
+                
                 <section data-scene="prutul">
                     <h2>Prutul de Jos</h2>
                     <img src="img/rs_prutul_jos.jpg" alt-text="Prutul de Jos" class="img-responsive img-thumbnail"
@@ -308,8 +314,6 @@
             <div class="col-sm-6 col-md-8 storymap-map"></div>
         </div>
 
-
-
         <!--the info page-->
         <div class="modal fade" id="info-modal" role="dialog">
             <div class="modal-dialog modal-md">
@@ -324,9 +328,15 @@
                         <p>Scopul elaborării sitului: Promovarea cunoștințelor despre APS. Testarea posibilităților
                             bibliotecii JavaScript Storymap.</p>
                         <br>
-                        <p><b>Autor: Veaceslav Zagaevschi | Terra Concept</b> </p>
+                        <p><b>Autor: Veaceslav Zagaevschi. Terra Concept SRL</b> </p>
+                        <a href="https://facebook.com/sharer.php?u=http://zagaevschi.tk/rs" target="_blank">Facebook</a>
+                        <a href="https://twitter.com/home?status=Location%20Spoofing%20at%20StandingRock%0Ahttp://zagaevschi.tk/rs"
+                            target="_blank">Twitter</a>
+
                         <br>
-                        <p><b>storymap.js</b> | Released Date: 20.02.2017 | Version: 2.5 | MIT License </p>
+                        <p><a href='https://github.com/jakobzhao/storymap'><img
+                                    src='http://jakobzhao.github.io/storymap/img/logo.png' width='18px' target='_blank'>
+                                storymap.js. </a> Released Date: 20.02.2017. Version: 2.5. MIT License. </p>
                         <p><b>Datele geospațiale:</b> Cartodb, <a href="http://www.terra-concept.com/">Terra Concept</a>
                             și <a href="http://test.oikumena.md/">Oikumena</a></p>
                     </div>
@@ -340,7 +350,6 @@
 
 
 </body>
-
 
 <script src="js/rs.js"></script>
 

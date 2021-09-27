@@ -187,7 +187,7 @@
 
             $(".storymap-map .leaflet-control-attribution")
                 .addClass("storymap-attribution")
-                .html("<a href='https://github.com/jakobzhao/storymap'><img src='http://jakobzhao.github.io/storymap/img/logo.png' width='18px' target='_blank' > storymap.js </a>");
+                .html("");
 
 
             if (settings.credits) {

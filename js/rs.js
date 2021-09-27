@@ -23,8 +23,8 @@
         }
     });
 
-    var toate_rs_legend = '<p><b>Legenda</b></p><br>' +
-        '<i style="background: #A44512; opacity: 0.8"></i><p><b>Hotarele RM</b></p><br><br>';
+    var toate_rs_legend = '<p><b>Rezervații Științifice</b></p><br>' +
+        '<i style="background: #A44512; opacity: 0.8"></i><p>Hotarul RM</p><br>';
 
 
         //////////////////////////////////////////////////////////////////////////
@@ -32,7 +32,7 @@
 
     function style3(feature) {
         return {
-            fillColor: 'green',
+            fillColor: '#4daf4a',
             fillOpacity: 0.1,
             weight: 3,
             opacity: 0.8,
@@ -41,10 +41,13 @@
         };
     }
 
+    
+
+
     var codrii = L.geoJson.ajax('assets/aps_codrii.geojson', {
         style: style3,
         onEachFeature: function (feature, layer) {
-            layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
+            layer.bindTooltip(href="Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
                 permanent: false,
                 direction: 'center'
@@ -52,28 +55,28 @@
         }
     });
 
-    var codrii_legend = '<p><b>RS Codrii</b></p><br>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
-    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
+    var codrii_legend = '<p><b>Codrii</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
+    '<i style="background: #4daf4a; opacity: 0.1"></i><p>Suprafața</p><br>';
 
 
     //////////////////////////////////////////////////////////////////////////
-    // Scene 4: Plaiul Fagului
+    // Scene 4: Padurea Domneasca
 
 
     function style4(feature) {
         return {
-            fillColor: '#ffffff',
+            fillColor: '#e41a1c',
             fillOpacity: 0.1,
             weight: 2,
             opacity: 0.8,
-            color: '#605f5f',
+            color: '#78BE21',
             dashArray: '4'
         };
     }
 
     var domneasca = L.geoJson.ajax('assets/aps_padurea_domneasca.geojson', {
-        style: style3,
+        style: style4,
         onEachFeature: function (feature, layer) {
             layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
@@ -84,26 +87,26 @@
     });
 
 
-    var domneasca_legend = '<p><b>RS Pădurea Domnească</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
-    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
+    var domneasca_legend = '<p><b>Pădurea Domnească</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
+    '<i style="background: #e41a1c; opacity: 0.1"></i><p>Suprafața</p><br>';
 
     //////////////////////////////////////////////////////////////////////////
     // Scene 5: Pădurea Domnească
 
     function style5(feature) {
         return {
-            fillColor: '#ffffff',
+            fillColor: '#377eb8',
             fillOpacity: 0.1,
             weight: 2,
             opacity: 0.8,
-            color: '#605f5f',
+            color: '#78BE21',
             dashArray: '4'
         };
     }
 
     var fagul = L.geoJson.ajax('assets/aps_plaiul_fagului.geojson', {
-        style: style3,
+        style: style5,
         onEachFeature: function (feature, layer) {
             layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
@@ -114,26 +117,26 @@
     });
 
 
-    var fagul_legend = '<p><b>RS Plaiul Fagului</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
-    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
+    var fagul_legend = '<p><b>Plaiul Fagului</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
+    '<i style="background: #377eb8; opacity: 0.1"></i><p>Suprafața</p><br>';
 
     //////////////////////////////////////////////////////////////////////////
     // Scene 6: Prutul de Jos
 
     function style6(feature) {
         return {
-            fillColor: '#ffffff',
+            fillColor: '#984ea3',
             fillOpacity: 0.1,
             weight: 2,
             opacity: 0.8,
-            color: '#605f5f',
+            color: '#78BE21',
             dashArray: '4'
         };
     }
 
     var prutul = L.geoJson.ajax('assets/aps_prutul_jos.geojson', {
-        style: style3,
+        style: style6,
         onEachFeature: function (feature, layer) {
             layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
@@ -144,18 +147,27 @@
     });
 
 
-    var prutul_legend = '<p><b>RS Prutul de Jos</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
-    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
+    var prutul_legend = '<p><b>Prutul de Jos</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
+    '<i style="background: #984ea3; opacity: 0.1"></i><p>Suprafața</p><br>';
 
     //////////////////////////////////////////////////////////////////////////
     // Scene 7: Iagorlic
 
-
+    function style7(feature) {
+        return {
+            fillColor: '#ffff33',
+            fillOpacity: 0.1,
+            weight: 2,
+            opacity: 0.8,
+            color: '#78BE21',
+            dashArray: '4'
+        };
+    }
 
 
     var iagorlic = L.geoJson.ajax('assets/aps_iagorlic.geojson', {
-        style: style3,
+        style: style7,
         onEachFeature: function (feature, layer) {
             layer.bindTooltip("Rezervația Științifică: <br>" + feature.properties.name, {
                 className: 'feature-label',
@@ -166,9 +178,9 @@
     });
 
 
-    var iagorlic_legend = '<p><b>RS Iagorlîc</b></p>' +
-    '<i style="background: #78BE21; opacity: 0.8"></i><p><b>Hotarele RS</b></p><br>' +
-    '<i style="background: green; opacity: 0.1"></i><p><b>Suprafața RS</b></p><br>';
+    var iagorlic_legend = '<p><b>Iagorlîc</b></p>' +
+    '<i style="background: #78BE21; opacity: 0.8"></i><p>Hotarul</p><br>' +
+    '<i style="background: #ffff33; opacity: 0.1"></i><p>Suprafața</p><br>';
 
     //////////////////////////////////////////////////////////////////////////
 
@@ -220,16 +232,16 @@
 
     var scenes = {
         start: {
-            lat: 47.06666667,
-            lng: 28.5,
-            zoom: 7.5,
+            lat: 47.10,
+            lng: 28.50,
+            zoom: 5,
             name: 'Început',
             layers: []
         },
         toate_rs: {
             lat: 47.00,
             lng: 27.00,
-            zoom: 7.5,
+            zoom: 8 ,
             name: 'Toate RȘ',
             layers: [layers.toate_rs,layers.codrii, layers.domneasca, layers.fagul, layers.prutul, layers.iagorlic]
         },
@@ -263,8 +275,8 @@
         },
         iagorlic: {
             lat: 47.370000,
-            lng: 29.100000,
-            zoom: 12,
+            lng: 29.110000,
+            zoom: 13,
             name: 'RȘ Iagorlîc',
             layers: [layers.iagorlic]
         },
@@ -279,12 +291,14 @@
     $('#storymap').storymap({
         scenes: scenes,
         baselayer: layers.cartodb_light,
-        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        legend: true, 
         credits: "",
         loader: true,
         scalebar: true,
         flyto: true,
-        navwidget: true,
+        navwidget: false,
+        navbar: false,
+        mapinteraction: false,
 
         createMap: function () {
             // create a map in the "map" div, set the view to a given place and zoom
@@ -292,10 +306,12 @@
                 zoomControl: false,
                 fadeAnimation: true,
                 zoomAnimation: true,
-                dragging: true, scrollWheelZoom: true, maxZoom: 14
+                dragging: true, 
+                scrollWheelZoom: false, 
+                minZoom: 7,                
+                maxZoom: 13
             }).setView([47, 27], 7.5);
 
-            //add an miniglobe
             new L.Control.GlobeMiniMap({
                 marker: 'red',
                 position: 'bottomright'
